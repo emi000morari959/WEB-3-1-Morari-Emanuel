@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Republica Moldova, Norvegia și Suedia</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fa;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #14213d, #1d3557);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        nav h2 {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: #1d3557;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #e76f51;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        .tara {
+            background: white;
+            margin-bottom: 35px;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+            border-top: 6px solid #457b9d;
+        }
+
+        .tara h2 {
+            color: #1d3557;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .tara h3 {
+            color: #457b9d;
+            margin: 22px 0 10px;
+        }
+
+        .tara p {
+            margin-bottom: 10px;
+        }
+
+        ul, ol, dl {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        dt {
+            font-weight: bold;
+            color: #1d3557;
+            margin-top: 12px;
+        }
+
+        dd {
+            margin-left: 20px;
+        }
+
+        /* Stiluri pentru tabelele care reprezintă steagurile */
+        .steag {
+            margin-top: 15px;
+            border-collapse: collapse;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .steag td {
+            width: 35px;
+            height: 25px;
+            padding: 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Culori și elemente pentru steaguri */
+        .moldova .albastru { background: #0033a0; }
+        .moldova .galben { background: #ffd100; color: #b33c00; font-size: 14px; }
+        .moldova .rosu { background: #cc092f; }
+
+        .norvegia .rosu { background: #ba0c2f; }
+        .norvegia .alb { background: #ffffff; }
+        .norvegia .albastru { background: #00205b; }
+
+        .suedia .albastru { background: #006aa7; }
+        .suedia .galben { background: #fecc00; }
+
+        .link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 9px 15px;
+            background: #1d3557;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .link:hover {
+            background: #e76f51;
+        }
+
+        .sus {
+            display: inline-block;
+            margin-top: 20px;
+            color: #457b9d;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .comparativ {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+            margin-bottom: 35px;
+        }
+
+        .comparativ h2 {
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+
+        .comparativ table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparativ th,
+        .comparativ td {
+            border: 1px solid #ccd5df;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .comparativ th {
+            background: #1d3557;
+            color: white;
+        }
+
+        .comparativ tr:nth-child(even) td {
+            background: #f1f5f9;
+        }
+
+        footer {
+            background: #14213d;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 750px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav h2 {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            main {
+                width: 94%;
+            }
+
+            .tara,
+            .comparativ {
+                padding: 22px;
+            }
+
+            .comparativ {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body id="sus">
+
+    <header>
+        <h1>Republica Moldova, Norvegia și Suedia</h1>
+        <p>Prezentare realizată pentru Laboratorul 2 – Recapitulare HTML</p>
+    </header>
+
+    <nav>
+        <h2>Meniu</h2>
+        <a href="#moldova">Partea 1 - Republica Moldova</a>
+        <a href="#norvegia">Partea 2 - Norvegia</a>
+        <a href="#suedia">Partea 3 - Suedia</a>
+    </nav>
+
+    <main>
+
+        <!-- Partea 1 - Republica Moldova -->
+        <div class="tara moldova" id="moldova">
+            <section>
+                <h2>Partea 1 - Republica Moldova</h2>
+
+                <article>
+                    <h3>Despre Republica Moldova</h3>
+                    <p>
+                        Republica Moldova este o țară situată în partea de est a Europei.
+                        Capitala țării este Chișinău. Moldova este cunoscută pentru
+                        vinăriile sale, locurile istorice și peisajele naturale.
+                    </p>
+                </article>
+
+                <h3>Obiective turistice</h3>
+                <ul>
+                    <li>Orheiul Vechi</li>
+                    <li>Cetatea Soroca</li>
+                    <li>Cricova</li>
+                    <li>Mănăstirea Căpriana</li>
+                    <li>Castel Mimi</li>
+                </ul>
+
+                <h3>Steagul Republicii Moldova</h3>
+                <!-- Tabel steag Moldova cu vulturul centrat pe mijloc -->
+                <table class="steag" border="1" cellspacing="0">
+                    <tr>
+                        <td class="albastru"></td>
+                        <td class="galben"></td>
+                        <td class="rosu"></td>
+                    </tr>
+                    <tr>
+                        <td class="albastru"></td>
+                        <td class="galben">🦅</td>
+                        <td class="rosu"></td>
+                    </tr>
+                    <tr>
+                        <td class="albastru"></td>
+                        <td class="galben"></td>
+                        <td class="rosu"></td>
+                    </tr>
+                </table>
+
+                <a class="link" href="https://ro.wikipedia.org/wiki/Republica_Moldova" target="_blank">
+                    Informații despre Moldova
+                </a>
+
+                <br>
+                <a class="sus" href="#sus">↑ Înapoi sus</a>
+            </section>
+        </div>
+
+        <!-- Partea 2 - Norvegia -->
+        <div class="tara norvegia" id="norvegia">
+            <section>
+                <h2>Partea 2 - Norvegia</h2>
+
+                <article>
+                    <h3>Despre Norvegia</h3>
+                    <p>
+                        Norvegia este o țară din nordul Europei, cunoscută pentru
+                        fiordurile sale, peisajele naturale și orașele sale moderne.
+                        Capitala Norvegiei este Oslo.
+                    </p>
+                </article>
+
+                <h3>Activități pentru turiști</h3>
+                <ol start="3">
+                    <li>Vizitarea fiordurilor norvegiene spectaculoase</li>
+                    <li>Explorarea obiectivelor din capitala Oslo</li>
+                    <li>Observarea aurorei boreale în nordul țării</li>
+                    <li>Drumeții montane în parcurile naționale</li>
+                    <li>Vizitarea muzeelor istorice și maritime</li>
+                </ol>
+
+                <h3>Steagul Norvegiei</h3>
+                <table class="steag" border="1" cellspacing="0">
+                    <tr>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                        <td class="alb"></td>
+                        <td class="albastru"></td>
+                        <td class="alb"></td>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                    </tr>
+                    <tr>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                        <td class="alb"></td>
+                        <td class="albastru"></td>
+                        <td class="alb"></td>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                    </tr>
+                    <tr>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                        <td class="albastru"></td>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                    </tr>
+                    <tr>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                    </tr>
+                    <tr>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                        <td class="albastru"></td>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                        <td class="alb"></td>
+                    </tr>
+                    <tr>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                        <td class="alb"></td>
+                        <td class="albastru"></td>
+                        <td class="alb"></td>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                        <td class="rosu"></td>
+                    </tr>
+                </table>
+
+                <a class="link" href="https://ro.wikipedia.org/wiki/Norvegia" target="_blank">
+                    Informații despre Norvegia
+                </a>
+
+                <br>
+                <a class="sus" href="#sus">↑ Înapoi sus</a>
+            </section>
+        </div>
+
+        <!-- Partea 3 - Suedia -->
+        <div class="tara suedia" id="suedia">
+            <section>
+                <h2>Partea 3 - Suedia</h2>
+
+                <article>
+                    <h3>Despre Suedia</h3>
+                    <p>
+                        Suedia este o țară nordică din Europa. Capitala țării este
+                        Stockholm. Suedia este cunoscută pentru industria sa,
+                        design, tehnologie și cultură.
+                    </p>
+                </article>
+
+                <h3>Termeni asociați Suediei</h3>
+                <dl>
+                    <dt>Stockholm</dt>
+                    <dd>Capitala Suediei și unul dintre cele mai importante orașe ale țării.</dd>
+
+                    <dt>IKEA</dt>
+                    <dd>Companie suedeză cunoscută pentru mobilier și produse pentru casă.</dd>
+
+                    <dt>Volvo</dt>
+                    <dd>Marcă suedeză cunoscută în special pentru automobile și vehicule.</dd>
+
+                    <dt>ABBA</dt>
+                    <dd>Grup muzical suedez foarte cunoscut la nivel internațional.</dd>
+                </dl>
+
+                <h3>Steagul Suediei</h3>
+                <table class="steag" border="1" cellspacing="0">
+                    <tr>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="galben"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                    </tr>
+                    <tr>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="galben"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                    </tr>
+                    <tr>
+                        <td class="galben"></td>
+                        <td class="galben"></td>
+                        <td class="galben"></td>
+                        <td class="galben"></td>
+                        <td class="galben"></td>
+                        <td class="galben"></td>
+                        <td class="galben"></td>
+                    </tr>
+                    <tr>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="galben"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                    </tr>
+                    <tr>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="galben"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                        <td class="albastru"></td>
+                    </tr>
+                </table>
+
+                <a class="link" href="https://ro.wikipedia.org/wiki/Suedia" target="_blank">
+                    Informații despre Suedia
+                </a>
+
+                <br>
+                <a class="sus" href="#sus">↑ Înapoi sus</a>
+            </section>
+        </div>
+
+        <!-- Tabel comparativ -->
+        <div class="comparativ">
+            <h2>Tabel comparativ</h2>
+            <table>
+                <tr>
+                    <th colspan="4">Comparația celor trei țări</th>
+                </tr>
+                <tr>
+                    <th>Caracteristică</th>
+                    <th>Republica Moldova</th>
+                    <th>Norvegia</th>
+                    <th>Suedia</th>
+                </tr>
+                <tr>
+                    <td>Capitala</td>
+                    <td>Chișinău</td>
+                    <td>Oslo</td>
+                    <td>Stockholm</td>
+                </tr>
+                <tr>
+                    <td>Regiunea</td>
+                    <td>Europa de Est</td>
+                    <td>Europa de Nord</td>
+                    <td>Europa de Nord</td>
+                </tr>
+                <tr>
+                    <td>Limba principală</td>
+                    <td>Română</td>
+                    <td>Norvegiană</td>
+                    <td>Suedeză</td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Laboratorul 2 – Recapitulare HTML</p>
+        <p>Pagina realizată pentru prezentarea Republicii Moldova, Norvegiei și Suediei.</p>
+        <a href="#sus">↑ Înapoi sus</a>
+    </footer>
+
+</body>
+</html>
